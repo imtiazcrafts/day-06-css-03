@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#hover_box{
+    background: #093b5c;
+    height: 100vh;
+}
+
+#hover_box .container{
+    /* background-color: #ff0000; */
+    width: 1200px;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+  
+}
+
+#hover_box .hover_box{
+    background: #fff;
+    width: 300px;
+    height: 500px;
+    cursor: pointer;
+    position: relative;
+}
+
+#hover_box .hover_box img{
+    width: 100%;
+    height: 100%;
+}
+
+#hover_box .hover_box::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 12, 12, 0.781);
+    top: 0%;
+    left: 0%;
+    border-radius: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    visibility:hidden;
+}
+
+#hover_box .hover_box:hover::after{
+    opacity: 0.6;
+    visibility:visible;
+}
+#hover_box .icons{
+    font-size: 25px;
+    
+}
+
+#hover_box .icons .first{
+    position: absolute;
+    color: #ffffffd3;
+    top:  80%;
+    left: 10%;
+    z-index: 15;
+    transform: translate(-50%,-50%);
+
+}
+
+#hover_box .icons span .first{
+    width: 40px;
+    height: 40px;
+    background: black;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+}
+
+#hover_box .icons .last{
+    position: absolute;
+    color: #ffffffd3;
+    top:  80%;
+    left: 85%;
+    z-index: 15;
+    transform: translate(-50%,-50%);
+}
+
+#hover_box .icons span:hover{
+    color: #3d3d3d;
+    transition: 0.5s;
+
+}
+#hover_box .icons span:first-child{
+    transform: translateY(300%);
+    visibility: hidden;
+    opacity: 0;
+} 
+#hover_box .icons span:last-child{
+    transform: translateY(300%);
+    visibility: hidden;
+    opacity: 0;
+} 
+
+#hover_box .hover_box:hover .icons span:first-child{
+    transform: translateY(0%) rotate(360deg);
+    transition: 0.7s;
+    visibility: visible;
+    opacity: 1;
+}
+#hover_box .hover_box:hover .icons span:last-child{
+    transform: translateY(0%) rotate(360deg);
+    transition: 0.7s;
+    visibility: visible;
+    opacity: 1;
+}
